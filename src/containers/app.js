@@ -7,7 +7,7 @@ import UserList from"../components/userList"
 import MyButton from"../components/myButton"
 import {userLogin} from "../actions"
 import{connect} from "react-redux"
-import websocket,{send} from "./myWebSocket"
+import websocket, {send} from "./myWebSocket"
 
 
 class App extends React.Component {
@@ -17,8 +17,9 @@ class App extends React.Component {
     }
 
     subscribe() {
-       send(this.props.user)
+        send(this.props.user)
     }
+
     render() {
         const {user, userList, dispatch}=this.props
         return (
